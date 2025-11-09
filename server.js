@@ -3,10 +3,10 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
-app.use(express.json());
+app.use(cors()); //•	Ativa o CORS, permitindo requisições externas.
+app.use(express.json()); //•	Ativa o express.json() para que o servidor consiga ler corpos de requisição em JSON
 
-// Banco de dados simulado com imagens públicas
+
 const produtos = {
   "7894900010017": {
     nome: "Leite Integral 1L",

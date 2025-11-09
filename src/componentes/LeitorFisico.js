@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./LeitorFisico.css"; // 👈 importando o CSS externo
+import "./LeitorFisico.css"; 
 
 function LeitorFisico() {
   const [codigo, setCodigo] = useState("");
@@ -7,13 +7,13 @@ function LeitorFisico() {
   const [erro, setErro] = useState("");
 
   const buscarProduto = async (valor) => {
-    if (!valor) return;
+    if (!valor) return; //Se o código estiver vazio, sai da função sem fazer nada.
     try {
-      const res = await fetch(`http://localhost:4000/api/produtos/${valor}`);
+      const res = await fetch(`http://localhost:4000/api/produtos/${valor}`); //Faz uma requisição HTTP GET para o servidor local:
       if (!res.ok) throw new Error("Produto não encontrado");
-      const data = await res.json();
-      setProduto(data);
-      setErro("");
+      const data = await res.json(); //Converte a resposta do servidor em objeto JavaScript.
+      setProduto(data); //Atualiza o estado produto com os dados retornados.
+      setErro(""); //Limpa qualquer mensagem de erro anterior.
     } 
     catch (err) {
       setProduto(null);
@@ -28,7 +28,7 @@ function LeitorFisico() {
       <input
         type="text"
         value={codigo}
-        onChange={(e) => setCodigo(e.target.value)}
+        onChange={(e) => setCodigo(e.target.value)} //Cada vez que o usuário digita algo, o estado codigo é atualizado.
         onKeyDown={(e) => {
           if (e.key === "Enter") buscarProduto(codigo);
         }}
@@ -37,7 +37,7 @@ function LeitorFisico() {
         className="input-codigo"
       />
 
-      {erro && <p className="erro">{erro}</p>}
+      {erro && <p className="erro">{erro}</p>} 
 
       {produto && (
         <div className="card-produto">
