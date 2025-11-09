@@ -1,0 +1,64 @@
+.leitor-container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.titulo {
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 25px;
+}
+
+.input-codigo {
+  padding: 12px 15px;
+  font-size: 18px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  outline: none;
+  width: 320px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.input-codigo:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 6px rgba(0, 91, 187, 0.5);
+}
+
+.erro {
+  color: #d9534f;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.card-produto {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding: 20px;
+  width: 340px;
+  margin: 25px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card-produto:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.imagem-produto {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.preco {
+  color: #007bff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+}
