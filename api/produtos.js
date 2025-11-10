@@ -1,12 +1,5 @@
-const express = require("express");
-const cors = require("cors");
-
-const app = express();
-app.use(cors()); //•	Ativa o CORS, permitindo requisições externas.
-app.use(express.json()); //•	Ativa o express.json() para que o servidor consiga ler corpos de requisição em JSON
-
-
-const produtos = {
+export default function handler(req, res) {
+  const produtos = {
   "7894900010017": {
     nome: "Leite Integral 1L",
     descricao: "Leite integral pasteurizado 1 litro",
@@ -69,11 +62,9 @@ const produtos = {
   },
 };
 
-app.get("/api/produtos/:codigo", (req, res) => {
-  const produto = produtos[req.params.codigo];
-  if (!produto) return res.status(404).json({ erro: "Produto não encontrado" });
-  res.json(produto);
-});
+  const { codigo } = req.query;
+  const produto = produtos[codigo];
 
-const PORT = 4000;
-app.listen(PORT, () => console.log(`✅ Servidor rodando em http://localhost:${PORT}`));
+  if (produto) res.status(200).json(produto);
+  else res.status(404).json({ erro: "Produto não encontrado" });
+}

@@ -17,7 +17,7 @@ function LeitorFisico() {
     } 
     catch (err) {
       setProduto(null);
-      setErro("Produto não encontrado 😢");
+      setErro("Produto não encontrado ");
     }
   };
 
