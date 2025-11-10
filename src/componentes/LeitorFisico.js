@@ -9,7 +9,7 @@ function LeitorFisico() {
   const buscarProduto = async (valor) => {
     if (!valor) return; //Se o código estiver vazio, sai da função sem fazer nada.
     try {
-      const res = await fetch(`http://localhost:4000/api/produtos/${valor}`); //Faz uma requisição HTTP GET para o servidor local:
+      const res = await fetch(`/api/produtos?codigo=${valor}`); //Faz uma requisição HTTP GET para o servidor local:
       if (!res.ok) throw new Error("Produto não encontrado");
       const data = await res.json(); //Converte a resposta do servidor em objeto JavaScript.
       setProduto(data); //Atualiza o estado produto com os dados retornados.
