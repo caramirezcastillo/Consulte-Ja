@@ -6,6 +6,14 @@ export default function handler(req, res) {
     preco: 6.5,
     imagem: "https://mercantilnovaera.vtexassets.com/arquivos/ids/217472-1600-auto?v=638542478816370000&width=1600&height=auto&aspect=true",
   },
+
+    "000177": {
+    nome: "Cadeira",
+    descricao: "Sillas De Oficina Mobiliário De Escritório Cadeira Moderna Fauteuil Gerente De Mesa Ceo Cadeira De Escritório chefe Cadeira Escritório",
+    preco: 300,
+    imagem: "https://s.alicdn.com/@sc04/kf/H2194638d47d94f0295a1e5fa93b41eb2W/Chair-s-Comfortable-Black-Office-Chair-Lumbar-Support-Ergonomic-Mid-Back-Cushion-Mesh-Swivel-Rolling-for-Desk-Gaming-Home-Use.png_300x300.jpg",
+  },
+
   "7891000055127": {
     nome: "Coca-Cola 2L",
     descricao: "Refrigerante sabor cola 2 litros",
